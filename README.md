@@ -1,0 +1,2 @@
+# patikaDevOdev
+patikaDevOdevler
