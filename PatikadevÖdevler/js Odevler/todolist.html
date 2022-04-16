@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO-LİST</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+.baslık{
+    border:50px;
+    background-color: orange;
+    padding:30px;
+    margin:75px;
+    text-align: center;
+}
+.ekleButon{
+    padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  
+}
+.ekleButon:hover{
+    background-color: #bbb;
+}
+input{
+    margin: -10px;
+  border: none;
+  border-radius: 0;
+  width: 25%;
+  padding: 10px;
+  
+  font-size: 16px;
+  text-align: center;;
+}
+.kapat{
+    position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+.kapat:hover{
+    color:whitesmoke;
+    background-color: #f44336;
+}
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  
+  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+ul li.yapıldı{
+    background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+ul li.yapıldı::before{
+    content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+  
+}
+.kapat:hover {
+  background-color: #f44336;
+  color: white;
+}
+</style>
+<body>
+    <div class="container-fluid">
+        <div class="baslık">
+            <img src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png"
+            alt="tag" style="background-color: white;"
+            class="rounded"> 
+            <h2>Yapılacaklar Listesi</h2>
+            <input type="text" id="giris" placeholder="Görev Ekle...">
+            <span onclick="yeniGörev()" class="ekleButon" style="background-color: gray;">Ekle</span>
+        </div>
+        <ul id="BenimSıra">
+            <li>Spor Yap</li>
+            <li>Kitap Oku</li>
+           <li class="yapıldı">Yemek Yap</li>  <!--  yapıldı diye style oluşturmayı unutma -->
+            <li>Arabayı bakıma götür</li>
+        </ul>
+
+
+
+
+
+<script src="todolist.js"></script>
+    </div>
+</body>
+</html>
